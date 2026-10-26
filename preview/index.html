@@ -1,0 +1,217 @@
+<title>QuizMaster Preview</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a screen switcher on top, one app screen at a time below. Same look as the real QuizMaster client. */
+:root{
+  --bg:#f6f7fb; --surface:#ffffff; --ink:#111633; --body:#3b4160; --muted:#6b7191; --line:#e3e6f0; --soft:#eef0f8;
+  --brand:#4f46e5; --brand2:#7c3aed; --brand-soft:#eceeff; --brand-ink:#3730a3;
+  --good:#059669; --good-soft:#e4f7ef; --warn:#b45309; --warn-soft:#fdf1da; --bad:#dc2626; --bad-soft:#fde8e8;
+  --dark:#171a3a; --on-dark:#ffffff;
+  --font:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1020; --surface:#171a30; --ink:#f1f2fb; --body:#c4c8e2; --muted:#8e94b8; --line:#2a2e4c; --soft:#20244020;
+  --brand:#8b84ff; --brand2:#a78bfa; --brand-soft:#25285a; --brand-ink:#c9c6ff;
+  --good:#34d399; --good-soft:#10332a; --warn:#fbbf24; --warn-soft:#3a2d0e; --bad:#f87171; --bad-soft:#3d1a1f;
+  --dark:#0a0c1c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1020; --surface:#171a30; --ink:#f1f2fb; --body:#c4c8e2; --muted:#8e94b8; --line:#2a2e4c; --soft:#20244020;
+  --brand:#8b84ff; --brand2:#a78bfa; --brand-soft:#25285a; --brand-ink:#c9c6ff;
+  --good:#34d399; --good-soft:#10332a; --warn:#fbbf24; --warn-soft:#3a2d0e; --bad:#f87171; --bad-soft:#3d1a1f;
+  --dark:#0a0c1c; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--body);font-family:var(--font);font-size:14px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+h1,h2,h3{color:var(--ink);margin:0;letter-spacing:-.02em;text-wrap:balance}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.wrap{max-width:1100px;margin:0 auto}
+/* switcher */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--surface);border-bottom:1px solid var(--line);
+  margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding:10px max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px))}
+.bar .wrap{display:flex;flex-direction:column;gap:8px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--ink);font-size:17px}
+.logo i{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:16px}
+.pill{font-size:11px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--warn-soft);color:var(--warn)}
+.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.tabs button{border:0;background:none;color:var(--muted);font-weight:700;padding:9px 13px;border-bottom:2px solid transparent;white-space:nowrap}
+.tabs button[aria-selected=true]{color:var(--brand);border-color:var(--brand)}
+.sep{width:1px;background:var(--line);margin:8px 6px;flex:none}
+.view{padding-top:24px;animation:in .25s ease-out}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.view{animation:none}}
+/* primitives */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.btn{border:0;border-radius:12px;padding:10px 16px;font-weight:700;display:inline-flex;gap:8px;align-items:center;justify-content:center}
+.btn.p{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff}
+.btn.s{background:var(--surface);color:var(--body);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.g{background:var(--good);color:#fff} .btn:disabled{opacity:.5;cursor:not-allowed}
+.badge{display:inline-flex;gap:6px;align-items:center;font-size:12px;font-weight:700;padding:2px 10px;border-radius:99px}
+.b-live{background:var(--good-soft);color:var(--good)} .b-up{background:var(--brand-soft);color:var(--brand-ink)}
+.b-done{background:var(--soft);color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)} .b-warn{background:var(--warn-soft);color:var(--warn)}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+.grid{display:grid;gap:16px} .g3{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))} .g4{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.muted{color:var(--muted)} .tnum{font-variant-numeric:tabular-nums}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.head h1{font-size:clamp(24px,4vw,32px);font-weight:800}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.stat div{background:var(--bg);border-radius:12px;padding:8px;text-align:center}
+.stat b{display:block;font-size:17px;color:var(--ink)} .stat span{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--muted)}
+.hero{background:linear-gradient(135deg,#4338ca,#6d3df0 70%,#7c3aed);color:#fff;border-radius:24px;padding:clamp(20px,5vw,40px)}
+.hero h1{color:#fff;font-size:clamp(24px,4.5vw,36px);font-weight:800;margin:10px 0}
+.hero .kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:20px}
+.hero .kp div{background:#ffffff1f;border-radius:14px;padding:12px 14px} .hero .kp b{display:block;font-size:22px} .hero .kp span{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;opacity:.85}
+.two{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;margin-top:20px} @media(max-width:860px){.two{grid-template-columns:minmax(0,1fr)}}
+ul.rules{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px} ul.rules li{display:flex;gap:10px}
+ul.rules li::before{content:"";flex:none;width:8px;height:8px;margin-top:7px;border-radius:50%;background:var(--brand)}
+.big{font-size:38px;font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums;text-align:center;margin:6px 0}
+/* quiz */
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.timer{font-weight:800;font-size:18px;padding:8px 14px;border-radius:12px;background:var(--dark);color:var(--on-dark);font-variant-numeric:tabular-nums}
+.timer.w{background:var(--warn-soft);color:var(--warn)}
+.prog{height:6px;background:var(--line);border-radius:9px;overflow:hidden;margin-bottom:18px} .prog i{display:block;height:100%;background:var(--good);transition:width .3s}
+.quiz{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:20px} @media(max-width:860px){.quiz{grid-template-columns:minmax(0,1fr)}}
+.qtext{font-size:clamp(17px,2.4vw,20px);font-weight:700;color:var(--ink);line-height:1.5;margin:14px 0 18px}
+.opt{display:flex;gap:14px;align-items:flex-start;width:100%;text-align:left;background:var(--surface);color:var(--ink);font-weight:600;border:2px solid var(--line);border-radius:16px;padding:14px;margin-bottom:10px;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--brand)} .opt[aria-checked=true]{border-color:var(--brand);background:var(--brand-soft)}
+.opt b{flex:none;width:30px;height:30px;border-radius:9px;background:var(--soft);display:grid;place-items:center;font-weight:800;color:var(--muted)}
+.opt[aria-checked=true] b{background:var(--brand);color:#fff}
+.pal{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.pal button{height:40px;border:0;border-radius:11px;font-weight:800;background:var(--soft);color:var(--body);position:relative}
+.pal button.a{background:var(--good);color:#fff} .pal button.c{outline:2px solid var(--brand);outline-offset:2px} .pal button.f::after{content:"⚑";position:absolute;top:-6px;right:-3px;font-size:13px;color:var(--warn)}
+.qnav{display:flex;justify-content:space-between;gap:10px;margin-top:20px;flex-wrap:wrap}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:14px 0}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.modal{position:fixed;inset:0;background:#0009;display:grid;place-items:center;padding:16px;z-index:50}
+.modal .card{max-width:400px;width:100%}
+/* result / board */
+.ring{--p:72;width:170px;height:170px;border-radius:50%;margin:auto;display:grid;place-items:center;
+  background:conic-gradient(var(--brand) calc(var(--p)*1%),var(--line) 0)}
+.ring div{width:134px;height:134px;border-radius:50%;background:var(--surface);display:grid;place-content:center;text-align:center}
+.ring b{font-size:34px;color:var(--ink)}
+.row{display:flex;align-items:center;gap:14px;padding:13px 16px;border-bottom:1px solid var(--line)} .row:last-child{border:0}
+.row.me{background:var(--brand-soft)} .rk{width:34px;height:34px;border-radius:10px;background:var(--soft);display:grid;place-items:center;font-weight:800;flex:none}
+.rk.t{background:var(--warn-soft);color:var(--warn)} .grow{flex:1;min-width:0} .grow b{color:var(--ink);display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.podium{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:end;margin-bottom:20px}
+.podium div{border-radius:16px;padding:16px 8px;text-align:center;color:#2b2100} .podium b{display:block;font-size:20px}
+.tbl{width:100%;border-collapse:collapse;min-width:560px} .tbl th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:left;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line)} .scroll{overflow-x:auto}
+.note{background:var(--brand-soft);color:var(--brand-ink);border-radius:12px;padding:12px 14px;font-size:13px}
+.review{border-radius:12px;padding:10px 12px;margin-top:8px;border:2px solid var(--line);display:flex;justify-content:space-between;gap:8px}
+.review.ok{border-color:var(--good);background:var(--good-soft)} .review.no{border-color:var(--bad);background:var(--bad-soft)}
+.bars{display:flex;align-items:flex-end;gap:6px;height:90px;margin-top:10px} .bars i{flex:1;background:linear-gradient(var(--brand2),var(--brand));border-radius:6px 6px 0 0}
+</style>
+
+<div class="bar"><div class="wrap">
+  <div class="top">
+    <div class="logo"><i>✓</i>QuizMaster</div>
+    <span class="pill">Preview · sample data, not connected to the backend</span>
+  </div>
+  <div class="tabs" role="tablist" id="tabs"></div>
+</div></div>
+<main class="wrap" id="app" aria-live="polite"></main>
+<div id="modal"></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const SCREENS=[['dashboard','Dashboard'],['lobby','Lobby'],['quiz','Quiz'],['submitted','Submitted'],['result','Result'],['review','Review'],['leaderboard','Leaderboard'],['|'],['admin','Admin overview'],['participants','Participants'],['release','Results release']];
+const Q=[
+ {t:'Which planet has the most confirmed moons?',o:['Jupiter','Saturn','Uranus','Neptune'],c:1,m:2,e:'Saturn overtook Jupiter after a run of recent discoveries.'},
+ {t:'What is the chemical symbol for gold?',o:['Ag','Gd','Au','Go'],c:2,m:1,e:'Au comes from the Latin “aurum”.'},
+ {t:'Which data structure uses first-in, first-out ordering?',o:['Stack','Queue','Binary tree','Hash table'],c:1,m:1,e:'A queue removes the element inserted earliest.'},
+ {t:'In which year did the Berlin Wall fall?',o:['1987','1989','1991','1993'],c:1,m:1,e:'It opened on 9 November 1989.'},
+ {t:'What does HTTP status 404 mean?',o:['Server error','Unauthorized','Not found','Redirect'],c:2,m:1,e:'The server cannot find the requested resource.'},
+ {t:'What is the largest ocean on Earth?',o:['Atlantic','Indian','Arctic','Pacific'],c:3,m:1,e:'The Pacific covers about a third of the globe.'},
+ {t:'Which language runs natively in web browsers?',o:['Python','JavaScript','Java','C#'],c:1,m:1,e:'Browsers ship a JavaScript engine.'},
+ {t:'What is the powerhouse of the cell?',o:['Nucleus','Ribosome','Mitochondrion','Golgi body'],c:2,m:1,e:'Mitochondria produce most of the cell’s ATP.'}];
+const st={ans:{},flag:new Set(),i:0,secs:14*60+32,done:false};
+const mmss=s=>String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+const L='ABCDEF';
+
+const V={
+dashboard:()=>`<div class="head"><div><h1>Hello, Aarav</h1><p class="muted" style="margin:4px 0 0">Your competitions in one place. Every deadline is server time.</p></div></div>
+<div class="grid g3">
+ ${card('b-live','<span class="dot"></span> Live','Sample General Knowledge Challenge','Science, geography, technology and history warm-up.',[15,8,10],'Closes in 03:12:40','Enter lobby','lobby')}
+ ${card('b-up','Upcoming','Inter-College Tech Quiz 2026','Round one of the annual inter-college contest.',[45,40,60],'Starts in 2d 04:10:12','View details','lobby')}
+ ${card('b-done','Closed','Python Fundamentals Test','Variables, loops, functions and data structures.',[30,25,25],'Results published','View results','result')}
+</div>`,
+lobby:()=>`<section class="hero"><span class="badge b-live" style="background:#ffffff26;color:#fff"><span class="dot"></span> Live</span>
+<h1>Sample General Knowledge Challenge</h1><p style="max-width:56ch;opacity:.9;margin:0">A 8-question warm-up covering science, geography, technology and history.</p>
+<div class="kp"><div><b>15m</b><span>Duration</span></div><div><b>${Q.length}</b><span>Questions</span></div><div><b>${Q.reduce((a,q)=>a+q.m,0)}</b><span>Total marks</span></div><div><b>−25%</b><span>Wrong answer</span></div></div></section>
+<div class="two"><div class="card"><h2>Before you begin</h2><ul class="rules">
+<li>You have 15 minutes once you press Start. The timer runs on the server, so closing the tab does not pause it.</li>
+<li>Answers save automatically. If you disconnect, sign in again and choose Resume.</li>
+<li>A wrong answer costs 25% of that question’s marks. Unanswered questions score zero.</li>
+<li>You have a single attempt. Once submitted it cannot be repeated.</li></ul></div>
+<div class="card"><p class="muted" style="text-align:center;margin:0;font-weight:700">Closes in</p><div class="big" style="color:var(--good)">03:12:40</div>
+<label style="display:flex;gap:10px;margin:14px 0"><input type="checkbox" id="agree"> <span>I have read the instructions and understand the timer starts immediately.</span></label>
+<button class="btn p" style="width:100%" id="start" disabled>Start quiz</button></div></div>`,
+quiz:()=>{const q=Q[st.i],n=Object.keys(st.ans).length;return `
+<div class="qhead"><div><h2 style="font-size:16px">Sample General Knowledge Challenge</h2><span class="muted">Question ${st.i+1} of ${Q.length} · ${n} answered</span></div>
+<div style="display:flex;gap:10px;align-items:center"><span class="muted" style="font-weight:600">● All changes saved</span><span class="timer ${st.secs<300?'w':''}" id="timer" role="timer">${mmss(st.secs)}</span></div></div>
+<div class="prog"><i style="width:${n/Q.length*100}%"></i></div>
+<div class="quiz"><section class="card"><div style="display:flex;justify-content:space-between"><span class="badge b-up">Question ${st.i+1}</span><span class="muted">${q.m} mark${q.m>1?'s':''} · wrong −25%</span></div>
+<h2 class="qtext">${q.t}</h2><div role="radiogroup">${q.o.map((o,k)=>`<button class="opt" role="radio" aria-checked="${st.ans[st.i]===k}" data-o="${k}"><b>${L[k]}</b><span>${o}</span></button>`).join('')}</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn s" id="flag">${st.flag.has(st.i)?'⚑ Flagged':'⚐ Flag for review'}</button><button class="btn s" id="clr" ${st.ans[st.i]===undefined?'disabled':''}>Clear</button></div>
+<div class="qnav"><button class="btn s" id="prev" ${st.i?'':'disabled'}>← Previous</button>${st.i<Q.length-1?'<button class="btn p" id="next">Next →</button>':'<button class="btn g" id="sub">Finish &amp; submit</button>'}</div></section>
+<aside class="card" style="align-self:start"><h3 style="font-size:14px;margin-bottom:14px">Question navigator</h3><div class="pal">${Q.map((_,k)=>`<button data-g="${k}" class="${st.ans[k]!==undefined?'a':''} ${k===st.i?'c':''} ${st.flag.has(k)?'f':''}" aria-label="Question ${k+1}">${k+1}</button>`).join('')}</div>
+<div class="legend"><span><i style="background:var(--good)"></i>Answered</span><span><i style="background:var(--soft)"></i>Open</span><span><i style="outline:2px solid var(--brand)"></i>Current</span></div>
+<button class="btn p" style="width:100%" id="sub2">Submit quiz</button></aside></div>`},
+submitted:()=>`<div style="max-width:520px;margin:0 auto"><div class="card" style="padding:0;overflow:hidden;text-align:center"><div style="background:linear-gradient(135deg,#10b981,#0d9488);color:#fff;padding:36px 20px"><div style="font-size:42px">✓</div><h1 style="color:#fff;font-size:26px;margin-top:8px">Submission received!</h1><p style="margin:6px 0 0;opacity:.9">Sample General Knowledge Challenge</p></div>
+<div style="padding:24px"><div class="grid" style="grid-template-columns:1fr 1fr;text-align:left">${[['Receipt','7K4P9X2A'],['Answered',`${Object.keys(st.ans).length||6} of ${Q.length}`],['Submitted at','20 Oct 2026, 4:21 PM'],['Method','Manual']].map(([a,b])=>`<div style="background:var(--bg);border-radius:12px;padding:12px"><div class="muted" style="font-size:12px;font-weight:600">${a}</div><b style="color:var(--ink)">${b}</b></div>`).join('')}</div>
+<p class="muted" style="margin:18px 0">Your score stays hidden until the organiser publishes the results.</p><button class="btn s" data-go="dashboard">Back to dashboard</button></div></div></div>`,
+result:()=>`<div style="max-width:720px;margin:0 auto"><div class="card" style="padding:0;overflow:hidden"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;align-items:center;padding:32px;background:linear-gradient(135deg,var(--brand-soft),var(--surface))">
+<div class="ring" style="--p:78"><div><b>7.25</b><span class="muted">of 9</span></div></div><div><span style="color:var(--good);font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:.08em">Great work</span><h1 style="font-size:28px;margin:4px 0">80.6% score</h1><p class="muted" style="margin:0 0 12px">Sample General Knowledge Challenge</p><span class="badge b-warn" style="font-size:14px;padding:6px 14px">🏅 Rank #3 of 42</span></div></div>
+<div class="grid g4" style="gap:1px;background:var(--line)">${[['Correct','6','var(--good)'],['Wrong','1','var(--bad)'],['Unanswered','1','var(--muted)'],['Time taken','11m 04s','var(--brand)']].map(([a,b,c])=>`<div style="background:var(--surface);padding:18px;text-align:center"><b style="font-size:22px;color:var(--ink)">${b}</b><div style="font-size:12px;font-weight:700;color:${c}">${a}</div></div>`).join('')}</div>
+<div style="padding:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="btn p" data-go="review">Review my answers</button><button class="btn s" data-go="leaderboard">View leaderboard</button></div></div></div>`,
+review:()=>`<div style="max-width:720px;margin:0 auto"><div class="head"><div><h1>Answer review</h1><p class="muted" style="margin:4px 0 0">You scored 7.25 of 9. Released by the organiser on 21 Oct, 10:00 AM.</p></div></div>
+${Q.slice(0,3).map((q,i)=>{const mine=[1,0,1][i];const ok=mine===q.c;return `<div class="card" style="margin-bottom:14px"><div style="display:flex;justify-content:space-between"><span class="badge ${ok?'b-live':'b-warn'}" style="${ok?'':'background:var(--bad-soft);color:var(--bad)'}">${ok?'✓ Correct':'✕ Incorrect'}</span><b style="color:${ok?'var(--good)':'var(--bad)'}">${ok?'+'+q.m:'−0.25'} / ${q.m}</b></div>
+<h3 style="margin:12px 0;font-size:16px">${q.t}</h3>${q.o.map((o,k)=>`<div class="review ${k===q.c?'ok':k===mine?'no':''}"><span>${L[k]}. ${o}</span><b style="font-size:12px">${k===q.c?'Correct answer':k===mine?'Your answer':''}</b></div>`).join('')}
+<div class="note" style="margin-top:12px"><b>Explanation</b><br>${q.e}</div></div>`}).join('')}</div>`,
+leaderboard:()=>{const R=[['Diya Patel',9,'08m 41s'],['Kabir Singh',8.75,'10m 02s'],['Aarav Sharma',7.25,'11m 04s'],['Meera Nair',7,'09m 30s'],['Rohan Das',6.5,'12m 18s'],['Isha Verma',6,'13m 40s'],['Vihaan Rao',5.25,'14m 02s']];
+return `<div style="max-width:720px;margin:0 auto"><div class="head"><div><h1>Leaderboard</h1><p class="muted" style="margin:4px 0 0">42 participants · ranked by score, then fastest time</p></div></div>
+<div class="card" style="background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff;border:0;display:flex;justify-content:space-between;margin-bottom:18px"><div><div style="font-size:12px;font-weight:700;opacity:.8;text-transform:uppercase;letter-spacing:.08em">Your position</div><b style="font-size:30px">#3</b></div><div style="text-align:right"><b style="font-size:24px">7.25 / 9</b><div style="opacity:.85">11m 04s</div></div></div>
+<div class="podium"><div style="background:linear-gradient(#e5e7ef,#b4b9cc)"><b>2</b>Kabir<br><b>8.75</b></div><div style="background:linear-gradient(#fcd34d,#f59e0b);padding-block:28px">👑<b>1</b>Diya<br><b>9</b></div><div style="background:linear-gradient(#fdba74,#f97316)"><b>3</b>Aarav<br><b>7.25</b></div></div>
+<div class="card" style="padding:0">${R.map((r,i)=>`<div class="row ${i===2?'me':''}"><span class="rk ${i<3?'t':''}">${i+1}</span><div class="grow"><b>${r[0]}${i===2?' · You':''}</b><span class="muted" style="font-size:12px">${r[2]}</span></div><b style="color:var(--ink)" class="tnum">${r[1]}</b></div>`).join('')}</div>
+<p class="muted" style="font-size:12px;text-align:center">Names only. Participant IDs are login credentials and are never shown to other participants.</p></div>`},
+admin:()=>`<div class="head"><div><h1>Dashboard</h1><p class="muted" style="margin:4px 0 0">Everything running on your platform right now.</p></div><button class="btn p">+ New competition</button></div>
+<div class="grid g4">${[['Participants','128','112 active'],['Live competitions','1','closes in 3h 12m'],['Attempts in progress','23','of 42 started'],['Submitted today','19','server time']].map(([a,b,c])=>`<div class="card"><div class="muted" style="font-weight:700">${a}</div><div style="font-size:32px;font-weight:800;color:var(--ink)">${b}</div><div class="muted" style="font-size:12px">${c}</div></div>`).join('')}</div>
+<div class="two" style="grid-template-columns:minmax(0,1fr) minmax(0,1fr)"><div class="card"><h2 style="font-size:16px">Submissions per hour</h2><div class="bars">${[3,5,9,14,22,31,26,18,12,8].map(h=>`<i style="height:${h*3}px" title="${h}"></i>`).join('')}</div><div class="muted" style="font-size:12px;margin-top:6px">Sample data, last 10 hours</div></div>
+<div class="card"><h2 style="font-size:16px;margin-bottom:8px">Recent activity</h2>${[['ATTEMPT_SUBMITTED','QM-7K4P9X','2 min ago'],['PARTICIPANT_CREATED','admin','14 min ago'],['RESULTS_PUBLISH','admin','1 h ago'],['LOGIN_FAILED','QM-3HV8TN','2 h ago']].map(a=>`<div class="row" style="padding-inline:0"><div class="grow"><b style="font-size:13px">${a[0]}</b><span class="muted" style="font-size:12px">${a[1]}</span></div><span class="muted" style="font-size:12px">${a[2]}</span></div>`).join('')}</div></div>`,
+participants:()=>`<div class="head"><div><h1>Participants</h1><p class="muted" style="margin:4px 0 0">IDs and one-time temporary passwords are generated for you.</p></div><div style="display:flex;gap:8px"><button class="btn s">Bulk add</button><button class="btn p" id="addp">+ Add participant</button></div></div>
+<div class="card" style="padding:0"><div class="scroll"><table class="tbl"><thead><tr><th>Name</th><th>Participant ID</th><th>Organisation</th><th>Status</th><th>Last sign-in</th><th></th></tr></thead><tbody>
+${[['Aarav Sharma','QM-7K4P9X','Demo School','Active','Today, 4:02 PM'],['Diya Patel','QM-3HV8TN','Demo School','Active','Today, 3:48 PM'],['Kabir Singh','QM-9XQ2LD','Demo School','Active','Yesterday'],['Meera Nair','QM-5RB7WE','Riverdale College','Must change password','Never'],['Rohan Das','QM-2MC6YK','Riverdale College','Deactivated','12 Oct']].map(r=>`<tr><td><b style="color:var(--ink)">${r[0]}</b></td><td style="font-family:ui-monospace,monospace">${r[1]}</td><td>${r[2]}</td><td><span class="badge ${r[3]==='Active'?'b-live':r[3]==='Deactivated'?'b-done':'b-warn'}">${r[3]}</span></td><td class="muted">${r[4]}</td><td><button class="btn s" style="padding:5px 10px;font-size:12px">Reset password</button></td></tr>`).join('')}</tbody></table></div></div>`,
+release:()=>`<div class="head"><div><h1>Results &amp; release</h1><p class="muted" style="margin:4px 0 0">Sample General Knowledge Challenge · closed 20 Oct, 1:00 PM</p></div><button class="btn s">Export CSV</button></div>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">${[['Scores &amp; leaderboard','Published now','b-live','Unpublish'],['Answer key &amp; explanations','Scheduled for 22 Oct, 10:00 AM','b-up','Publish now']].map(r=>`<div class="card"><div style="display:flex;justify-content:space-between;gap:8px"><h2 style="font-size:16px">${r[0]}</h2><span class="badge ${r[2]}">${r[1]}</span></div><p class="muted">Released independently of when the quiz closed. Nothing is visible before the closing time, even if switched on.</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn p">${r[3]}</button><button class="btn s">Schedule…</button></div></div>`).join('')}</div>
+<div class="card" style="padding:0;margin-top:16px"><div class="scroll"><table class="tbl"><thead><tr><th>#</th><th>Participant</th><th>Score</th><th>Correct</th><th>Time</th><th>Submitted</th></tr></thead><tbody>${[[1,'Diya Patel',9,8,'08m 41s','12:41 PM'],[2,'Kabir Singh',8.75,8,'10m 02s','12:52 PM'],[3,'Aarav Sharma',7.25,6,'11m 04s','12:49 PM']].map(r=>`<tr><td>${r[0]}</td><td><b style="color:var(--ink)">${r[1]}</b></td><td class="tnum">${r[2]} / 9</td><td>${r[3]}</td><td>${r[4]}</td><td class="muted">${r[5]}</td></tr>`).join('')}</tbody></table></div></div>`
+};
+function card(cls,label,title,desc,[a,b,c],foot,cta,go){return `<article class="card" style="display:flex;flex-direction:column"><span class="badge ${cls}" style="align-self:flex-start">${label}</span><h3 style="font-size:18px;margin:12px 0 6px">${title}</h3><p class="muted" style="margin:0">${desc}</p>
+<div class="stat"><div><b>${a}</b><span>minutes</span></div><div><b>${b}</b><span>questions</span></div><div><b>${c}</b><span>marks</span></div></div><div class="note" style="margin-bottom:14px;font-weight:600">${foot}</div><button class="btn ${cls==='b-live'?'p':'s'}" style="margin-top:auto" data-go="${go}">${cta}</button></article>`}
+
+let cur='dashboard',tick;
+function show(id,push=true){if(!V[id])id='dashboard';cur=id;if(push)history.replaceState(null,'','#'+id);
+ $('#tabs').innerHTML=SCREENS.map(([k,l])=>k==='|'?'<span class="sep"></span>':`<button role="tab" aria-selected="${k===id}" data-s="${k}">${l}</button>`).join('');
+ $('#app').innerHTML=`<div class="view">${V[id]()}</div>`;bind();clearInterval(tick);
+ if(id==='quiz')tick=setInterval(()=>{st.secs=Math.max(0,st.secs-1);const t=$('#timer');if(t){t.textContent=mmss(st.secs);t.classList.toggle('w',st.secs<300)}},1000);window.scrollTo(0,0)}
+function bind(){
+ document.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>show(b.dataset.s));
+ document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>show(b.dataset.go));
+ const ag=$('#agree');if(ag)ag.onchange=()=>$('#start').disabled=!ag.checked;
+ const s=$('#start');if(s)s.onclick=()=>show('quiz');
+ if(cur==='quiz'){
+  const re=()=>{const y=scrollY;show('quiz');scrollTo(0,y)};
+  document.querySelectorAll('[data-o]').forEach(b=>b.onclick=()=>{st.ans[st.i]=+b.dataset.o;re()});
+  document.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>{st.i=+b.dataset.g;re()});
+  $('#flag').onclick=()=>{st.flag.has(st.i)?st.flag.delete(st.i):st.flag.add(st.i);re()};
+  $('#clr').onclick=()=>{delete st.ans[st.i];re()};
+  $('#prev').onclick=()=>{st.i--;re()};const n=$('#next');if(n)n.onclick=()=>{st.i++;re()};
+  const open=()=>{const a=Object.keys(st.ans).length;$('#modal').innerHTML=`<div class="modal"><div class="card"><h2 style="margin-bottom:14px">Submit your answers?</h2><div class="stat"><div><b style="color:var(--good)">${a}</b><span>Answered</span></div><div><b style="color:var(--bad)">${Q.length-a}</b><span>Unanswered</span></div><div><b style="color:var(--warn)">${st.flag.size}</b><span>Flagged</span></div></div><p class="muted">Once submitted, you cannot change your answers.</p><div style="display:flex;gap:8px;justify-content:flex-end"><button class="btn s" id="no">Keep working</button><button class="btn g" id="yes">Submit now</button></div></div></div>`;
+   $('#no').onclick=()=>$('#modal').innerHTML='';$('#yes').onclick=()=>{$('#modal').innerHTML='';show('submitted')}};
+  const sb=$('#sub');if(sb)sb.onclick=open;$('#sub2').onclick=open}
+ const ap=$('#addp');if(ap)ap.onclick=()=>{$('#modal').innerHTML=`<div class="modal"><div class="card"><h2>Participant created</h2><p class="muted">Shown once. The participant must change the password at first sign-in.</p><div class="note" style="font-family:ui-monospace,monospace;line-height:2">ID: QM-8TN4KC<br>Temporary password: Ws7mRq4Bzt9X</div><div style="text-align:right;margin-top:14px"><button class="btn p" id="ok">Done</button></div></div></div>`;$('#ok').onclick=()=>$('#modal').innerHTML=''}}
+addEventListener('keydown',e=>{if(e.key==='Escape')$('#modal').innerHTML=''});
+show((location.hash||'').slice(1)||'dashboard',false);
+</script>

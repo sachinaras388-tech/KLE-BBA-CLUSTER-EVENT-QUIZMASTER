@@ -1,0 +1,86 @@
+{
+  "competition": {
+    "title": "Sample General Knowledge Challenge",
+    "description": "A 10-question warm-up quiz covering science, geography, technology and history.",
+    "instructions": "Each question has exactly one correct answer. Wrong answers lose 25% of the question's marks. You can move between questions and change answers until you submit or the timer ends. Your progress is saved automatically.",
+    "durationMinutes": 15,
+    "negativeMarking": { "enabled": true, "fraction": 0.25 },
+    "shuffleQuestions": true,
+    "shuffleOptions": true,
+    "maxAttempts": 1,
+    "visibility": "assigned",
+    "showLeaderboard": true
+  },
+  "questions": [
+    {
+      "text": "Which planet in our solar system has the most confirmed moons?",
+      "options": ["Jupiter", "Saturn", "Uranus", "Neptune"],
+      "correctIndex": 1,
+      "explanation": "Saturn currently has the largest number of confirmed moons, overtaking Jupiter after a series of discoveries in recent years.",
+      "marks": 2
+    },
+    {
+      "text": "What is the chemical symbol for gold?",
+      "options": ["Ag", "Gd", "Au", "Go"],
+      "correctIndex": 2,
+      "explanation": "Au comes from the Latin word 'aurum'.",
+      "marks": 1
+    },
+    {
+      "text": "Which data structure uses First-In-First-Out (FIFO) ordering?",
+      "options": ["Stack", "Queue", "Binary tree", "Hash table"],
+      "correctIndex": 1,
+      "explanation": "A queue removes the element that was inserted earliest; a stack is Last-In-First-Out.",
+      "marks": 1
+    },
+    {
+      "text": "What is the capital city of Australia?",
+      "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
+      "correctIndex": 2,
+      "explanation": "Canberra was purpose-built as the capital as a compromise between Sydney and Melbourne.",
+      "marks": 1
+    },
+    {
+      "text": "In HTTP, which status code means 'Not Found'?",
+      "options": ["200", "301", "404", "500"],
+      "correctIndex": 2,
+      "explanation": "404 indicates the server cannot find the requested resource.",
+      "marks": 1
+    },
+    {
+      "text": "Who wrote the play 'Romeo and Juliet'?",
+      "options": ["Charles Dickens", "William Shakespeare", "Jane Austen", "Christopher Marlowe"],
+      "correctIndex": 1,
+      "explanation": "Romeo and Juliet was written by William Shakespeare in the 1590s.",
+      "marks": 1
+    },
+    {
+      "text": "What is the approximate speed of light in a vacuum?",
+      "options": ["300,000 km/s", "30,000 km/s", "3,000,000 km/s", "150,000 km/s"],
+      "correctIndex": 0,
+      "explanation": "Light travels at about 299,792 km/s in a vacuum, usually rounded to 300,000 km/s.",
+      "marks": 2
+    },
+    {
+      "text": "Which of the following is NOT a JavaScript primitive type?",
+      "options": ["string", "boolean", "object", "symbol"],
+      "correctIndex": 2,
+      "explanation": "Objects are reference types. The primitives are string, number, bigint, boolean, undefined, symbol and null.",
+      "marks": 2
+    },
+    {
+      "text": "In which year did the Berlin Wall fall?",
+      "options": ["1985", "1987", "1989", "1991"],
+      "correctIndex": 2,
+      "explanation": "The Berlin Wall fell on 9 November 1989.",
+      "marks": 1
+    },
+    {
+      "text": "Which gas makes up the largest share of Earth's atmosphere?",
+      "options": ["Oxygen", "Carbon dioxide", "Argon", "Nitrogen"],
+      "correctIndex": 3,
+      "explanation": "Nitrogen makes up roughly 78% of the atmosphere; oxygen is about 21%.",
+      "marks": 1
+    }
+  ]
+}

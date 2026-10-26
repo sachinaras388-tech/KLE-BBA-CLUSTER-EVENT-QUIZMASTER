@@ -1,0 +1,724 @@
+{
+  "questions": [
+    {
+      "text": "What is Artificial Intelligence AI?",
+      "options": [
+        "A computer physical hardware",
+        "Technology that enables machines to perform tasks requiring human-like intelligence",
+        "A type of computer network",
+        "A programming language"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "AI enables machines to simulate human-like intelligence."
+    },
+    {
+      "text": "Who is widely known as the father of Artificial Intelligence?",
+      "options": [
+        "Alan Turing",
+        "Bill Gates",
+        "John McCarthy",
+        "Charles Babbage"
+      ],
+      "correctIndex": 2,
+      "marks": 1,
+      "explanation": "John McCarthy coined the term AI and organized the 1956 Dartmouth Conference."
+    },
+    {
+      "text": "Which of the following is an example of a generative AI chatbot?",
+      "options": [
+        "Microsoft Excel",
+        "ChatGPT",
+        "Windows Explorer",
+        "Google Maps"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "ChatGPT by OpenAI is a generative AI chatbot using large language models."
+    },
+    {
+      "text": "What does ML stand for in the context of AI?",
+      "options": [
+        "Meta Language",
+        "Machine Logic",
+        "Machine Learning",
+        "Modern Linguistics"
+      ],
+      "correctIndex": 2,
+      "marks": 1,
+      "explanation": "ML stands for Machine Learning, a subset of AI where systems learn from data."
+    },
+    {
+      "text": "Which of the following is a subfield of Artificial Intelligence?",
+      "options": [
+        "Quantum Physics",
+        "Natural Language Processing",
+        "Mechanical Engineering",
+        "Organic Chemistry"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "NLP is a subfield of AI focused on enabling machines to understand human language."
+    },
+    {
+      "text": "What is the primary purpose of a neural network in AI?",
+      "options": [
+        "To store large databases",
+        "To mimic the human brain for pattern recognition and learning",
+        "To connect computers to the internet",
+        "To design computer chips"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Neural networks are systems inspired by the human brain to recognize patterns."
+    },
+    {
+      "text": "Which AI concept involves teaching machines using labeled data?",
+      "options": [
+        "Unsupervised Learning",
+        "Reinforcement Learning",
+        "Supervised Learning",
+        "Transfer Learning"
+      ],
+      "correctIndex": 2,
+      "marks": 1,
+      "explanation": "Supervised Learning trains a model on labeled data to predict outputs for new inputs."
+    },
+    {
+      "text": "Which of the following is an example of AI in everyday life?",
+      "options": [
+        "Using a calculator",
+        "Voice assistants like Siri or Alexa",
+        "Sending a text message",
+        "Printing a document"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Voice assistants like Siri and Alexa use AI to understand and respond to user commands."
+    },
+    {
+      "text": "What is deep learning in AI?",
+      "options": [
+        "Learning that requires very little data",
+        "A type of machine learning using multi-layered neural networks",
+        "An advanced form of programming",
+        "A manual data labeling process"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Deep Learning uses neural networks with many layers to learn from large amounts of data."
+    },
+    {
+      "text": "Which company developed the AI model GPT-4?",
+      "options": [
+        "Google",
+        "Microsoft",
+        "OpenAI",
+        "Meta"
+      ],
+      "correctIndex": 2,
+      "marks": 1,
+      "explanation": "GPT-4 was developed by OpenAI. Microsoft has integrated it into its products."
+    },
+    {
+      "text": "What does NLP stand for in AI?",
+      "options": [
+        "Network Layer Protocol",
+        "Natural Language Processing",
+        "Neural Logic Programming",
+        "Numeric Learning Process"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "NLP (Natural Language Processing) helps computers understand and generate human language."
+    },
+    {
+      "text": "Which of the following is NOT a type of machine learning?",
+      "options": [
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Structured Learning",
+        "Reinforcement Learning"
+      ],
+      "correctIndex": 2,
+      "marks": 1,
+      "explanation": "The three main ML types are Supervised, Unsupervised, and Reinforcement. Structured Learning is not standard."
+    },
+    {
+      "text": "What is a chatbot?",
+      "options": [
+        "A physical robot that speaks",
+        "Software that simulates conversation with users",
+        "A type of computer processor",
+        "An advanced video game character"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "A chatbot is a computer program designed to simulate human conversation."
+    },
+    {
+      "text": "Which AI tool can generate images from text descriptions?",
+      "options": [
+        "MS Word",
+        "DALL-E",
+        "Google Sheets",
+        "Photoshop manual"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "DALL-E by OpenAI creates images from text descriptions using generative AI techniques."
+    },
+    {
+      "text": "What is the Turing Test used for?",
+      "options": [
+        "Testing internet speed",
+        "Evaluating whether a machine can exhibit human-like intelligence",
+        "Measuring computer storage",
+        "Checking software errors"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "The Turing Test evaluates whether a machine can exhibit intelligent behavior indistinguishable from a human."
+    },
+    {
+      "text": "Which of the following best describes Big Data?",
+      "options": [
+        "A large computer monitor",
+        "Extremely large datasets that cannot be processed by traditional software",
+        "An AI programming language",
+        "A type of database management system"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Big Data refers to datasets so large that traditional software cannot manage them."
+    },
+    {
+      "text": "What does algorithm mean in the context of AI?",
+      "options": [
+        "A type of computer hardware",
+        "A step-by-step set of instructions to solve a problem",
+        "A programming language",
+        "A method of data storage"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "An algorithm is a set of step-by-step rules that a computer follows to solve a problem."
+    },
+    {
+      "text": "Which AI application is used in healthcare to analyze medical images?",
+      "options": [
+        "Robotic Process Automation",
+        "Computer Vision",
+        "Natural Language Processing",
+        "Blockchain"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Computer Vision enables AI systems to analyze medical images like X-rays and MRIs."
+    },
+    {
+      "text": "What is reinforcement learning?",
+      "options": [
+        "Learning from labeled examples",
+        "Learning by trial and error with rewards and penalties",
+        "Learning from unlabeled data clusters",
+        "Memorizing fixed rules"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Reinforcement Learning is where an agent learns through rewards and penalties from the environment."
+    },
+    {
+      "text": "Which of the following is a popular programming language used in AI development?",
+      "options": [
+        "HTML",
+        "CSS",
+        "Python",
+        "XML"
+      ],
+      "correctIndex": 2,
+      "marks": 1,
+      "explanation": "Python is the most popular AI programming language due to TensorFlow, PyTorch, and scikit-learn."
+    },
+    {
+      "text": "What is computer vision in AI?",
+      "options": [
+        "The ability of computers to process text documents",
+        "The ability of AI systems to interpret and understand visual data",
+        "A computer security feature",
+        "A graphic design software"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Computer Vision trains computers to interpret the visual world from images and videos."
+    },
+    {
+      "text": "Which technology powers self-driving cars?",
+      "options": [
+        "Social Media Algorithms",
+        "Artificial Intelligence and Machine Learning",
+        "Traditional GPS alone",
+        "Bluetooth technology"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Self-driving cars use AI, ML, computer vision, and sensor fusion to navigate."
+    },
+    {
+      "text": "What is a recommendation system as used by Netflix or Amazon?",
+      "options": [
+        "A system that recommends career choices",
+        "An AI system that suggests products or content based on user preferences",
+        "A customer service module",
+        "A payment processing tool"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Recommendation systems use ML to suggest relevant content or products based on user behavior."
+    },
+    {
+      "text": "Which of the following is a risk or concern related to AI?",
+      "options": [
+        "Increased internet speed",
+        "Bias and privacy violations",
+        "Lower electricity costs",
+        "More programming languages"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Key AI concerns include algorithmic bias, privacy violations, and job displacement."
+    },
+    {
+      "text": "What is data training in machine learning?",
+      "options": [
+        "Teaching humans to use data tools",
+        "The process of feeding data into an AI model to help it learn patterns",
+        "Organizing files in a computer",
+        "Downloading software updates"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Data training exposes an AI model to data to learn patterns and improve accuracy."
+    },
+    {
+      "text": "Which of the following best describes a Large Language Model LLM?",
+      "options": [
+        "A massive physical server room",
+        "An AI model trained on huge amounts of text data to understand and generate language",
+        "A software for translating programming languages",
+        "A type of database"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "An LLM is trained on vast text to understand and generate natural language. Examples: GPT-4 and Gemini."
+    },
+    {
+      "text": "What does IoT stand for?",
+      "options": [
+        "Internet of Technology",
+        "Integration of Terminals",
+        "Internet of Things",
+        "Input-Output Terminal"
+      ],
+      "correctIndex": 2,
+      "marks": 1,
+      "explanation": "IoT (Internet of Things) refers to networked physical devices with sensors exchanging data over the internet."
+    },
+    {
+      "text": "Which Indian city is known as the Silicon Valley of India and a major AI hub?",
+      "options": [
+        "Mumbai",
+        "Chennai",
+        "Bengaluru",
+        "Hyderabad"
+      ],
+      "correctIndex": 2,
+      "marks": 1,
+      "explanation": "Bengaluru is India Silicon Valley due to its concentration of tech companies and AI research centers."
+    },
+    {
+      "text": "What is automation in the context of AI?",
+      "options": [
+        "Writing code manually",
+        "Using AI to perform repetitive tasks without human intervention",
+        "A form of internet security",
+        "A type of financial accounting"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "AI automation uses intelligent systems to perform repetitive tasks automatically."
+    },
+    {
+      "text": "Which of the following is a famous AI personal assistant developed by Apple?",
+      "options": [
+        "Cortana",
+        "Google Assistant",
+        "Siri",
+        "Alexa"
+      ],
+      "correctIndex": 2,
+      "marks": 1,
+      "explanation": "Siri is Apple AI-powered personal assistant, introduced in 2011."
+    },
+    {
+      "text": "What is facial recognition technology?",
+      "options": [
+        "A camera filter for social media",
+        "An AI system that identifies individuals by analyzing facial features",
+        "Software that draws cartoon faces",
+        "A biometric password tool for keyboards"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Facial recognition uses AI to identify a person from their facial features."
+    },
+    {
+      "text": "Which of the following is an example of unsupervised learning?",
+      "options": [
+        "Email spam classification with labeled data",
+        "Customer segmentation by grouping similar buying behaviors",
+        "Predicting house prices from historical data",
+        "A robot learning from rewards"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Unsupervised learning finds patterns in unlabeled data. Customer segmentation by clustering is a classic example."
+    },
+    {
+      "text": "What is the role of training data in AI?",
+      "options": [
+        "Data used to test an AI model after deployment",
+        "Data used to teach an AI model to recognize patterns and make decisions",
+        "Data stored only in cloud servers",
+        "Raw data that is never processed"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Training data is used during the AI learning phase to help the model learn patterns."
+    },
+    {
+      "text": "What does API stand for in software and AI context?",
+      "options": [
+        "Automated Programming Interface",
+        "Application Programming Interface",
+        "Artificial Processing Interface",
+        "Advanced Protocol Integration"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "API (Application Programming Interface) allows different software applications to communicate."
+    },
+    {
+      "text": "Which of the following describes prompt engineering in AI?",
+      "options": [
+        "Writing computer hardware manuals",
+        "Designing effective input instructions to get desired outputs from AI models",
+        "Building physical computer prompts",
+        "Fixing errors in AI hardware"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Prompt engineering designs inputs to guide AI language models toward accurate and relevant responses."
+    },
+    {
+      "text": "What is Google AI model called that was launched as a competitor to ChatGPT?",
+      "options": [
+        "LaMDA",
+        "Watson",
+        "Gemini",
+        "Copilot"
+      ],
+      "correctIndex": 2,
+      "marks": 1,
+      "explanation": "Google multimodal AI model is called Gemini (formerly Bard), competing with OpenAI ChatGPT."
+    },
+    {
+      "text": "What is bias in AI models?",
+      "options": [
+        "A feature that improves accuracy",
+        "Systematic errors in AI outputs caused by flawed or unrepresentative training data",
+        "A type of AI hardware defect",
+        "Extra processing power used by AI"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "AI bias produces unfair or inaccurate outputs due to biased training data or model design."
+    },
+    {
+      "text": "What does cloud computing mean in relation to AI?",
+      "options": [
+        "Using weather forecasts for computing",
+        "Storing and processing data on remote servers via the internet for AI applications",
+        "Computing done only on laptops",
+        "A type of wireless network"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Cloud computing provides on-demand resources over the internet enabling AI to scale."
+    },
+    {
+      "text": "Which of the following tasks can AI currently perform?",
+      "options": [
+        "Feeling emotions",
+        "Translating languages diagnosing diseases and generating art",
+        "Thinking consciously like humans",
+        "Experiencing physical pain"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Current AI translates languages, diagnoses diseases from images, and generates art but cannot feel emotions."
+    },
+    {
+      "text": "What is Generative AI?",
+      "options": [
+        "AI that destroys old data",
+        "AI that can create new content such as text images audio and video",
+        "AI used only for calculations",
+        "AI that controls industrial machines"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Generative AI creates new content including text, images, music, and video."
+    },
+    {
+      "text": "Which of the following is an AI tool used for writing assistance?",
+      "options": [
+        "Adobe Photoshop",
+        "Grammarly",
+        "Microsoft Excel",
+        "VLC Media Player"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Grammarly uses AI and NLP to check grammar and improve writing style in real-time."
+    },
+    {
+      "text": "What is overfitting in machine learning?",
+      "options": [
+        "When a model performs well on training data but poorly on new data",
+        "When a model is trained with too little data",
+        "When an AI model uses too much electricity",
+        "When a model has too few parameters"
+      ],
+      "correctIndex": 0,
+      "marks": 1,
+      "explanation": "Overfitting occurs when a model learns training data too well but fails to generalize to new data."
+    },
+    {
+      "text": "What does GPU stand for and why is it important for AI?",
+      "options": [
+        "General Processing Unit used for office tasks",
+        "Graphics Processing Unit whose parallel processing accelerates AI and ML training",
+        "Global Processing Utility used for internet access",
+        "Graphical Programming Unit used for coding AI"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "GPU accelerates AI training through parallel processing of many calculations simultaneously."
+    },
+    {
+      "text": "Which AI-powered tool helps doctors detect diseases from X-ray or MRI images?",
+      "options": [
+        "Excel-based diagnosis",
+        "AI-powered diagnostic imaging software",
+        "Traditional film X-ray readers",
+        "Bluetooth medical devices"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "AI diagnostic imaging tools like DeepMind analyze medical scans to detect diseases accurately."
+    },
+    {
+      "text": "What is the primary function of a search engine that uses AI?",
+      "options": [
+        "To replace human librarians entirely",
+        "To find and rank relevant web pages based on user queries using AI algorithms",
+        "To create websites automatically",
+        "To block inappropriate content manually"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "AI-powered search engines use ML to understand queries and rank the most relevant results."
+    },
+    {
+      "text": "Which of the following is a major ethical concern about AI-generated content deepfakes?",
+      "options": [
+        "It uses too much storage",
+        "It can spread misinformation and be used for fraud or defamation",
+        "It is too expensive to create",
+        "It slows down internet speeds"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Deepfakes pose ethical concerns including spreading misinformation, fraud, and reputational damage."
+    },
+    {
+      "text": "What is robotics in the context of AI?",
+      "options": [
+        "Drawing robots in art class",
+        "The integration of AI with mechanical systems to create machines that can act in the physical world",
+        "Selling robot toys",
+        "Writing fiction about robots"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "AI robotics combines AI with mechanical engineering to create intelligent physical machines."
+    },
+    {
+      "text": "Which of these is a common use of AI in the banking and finance sector?",
+      "options": [
+        "Printing bank statements",
+        "Fraud detection and credit scoring",
+        "Opening new bank branches",
+        "Counting physical cash"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "AI in finance is used for real-time fraud detection, automated credit scoring, and algorithmic trading."
+    },
+    {
+      "text": "What is speech recognition in AI?",
+      "options": [
+        "A technology that converts text to images",
+        "The ability of AI to identify and convert spoken language into text",
+        "A machine that creates speeches for politicians",
+        "Software that records audio only"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Speech recognition uses AI to convert spoken words into text, enabling voice-controlled applications."
+    },
+    {
+      "text": "Which of the following is an example of AI being used in education?",
+      "options": [
+        "Printing textbooks automatically",
+        "Adaptive learning platforms that personalize content for each student",
+        "Scheduling school buses",
+        "Designing school uniforms"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "AI adaptive learning platforms like Khan Academy tailor content to individual student needs."
+    },
+    {
+      "text": "What is predictive analytics in AI?",
+      "options": [
+        "Predicting lottery numbers",
+        "Using historical data and AI to forecast future outcomes or trends",
+        "Analyzing past events only",
+        "Creating random data patterns"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Predictive analytics uses ML and statistics to forecast future outcomes from historical data."
+    },
+    {
+      "text": "Which AI technology is used in virtual assistants to understand user intent?",
+      "options": [
+        "Computer Vision",
+        "Natural Language Understanding NLU",
+        "Robotic Process Automation",
+        "Data Warehousing"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Natural Language Understanding (NLU) enables AI to comprehend the meaning and intent behind human language."
+    },
+    {
+      "text": "What does open source AI mean?",
+      "options": [
+        "AI that is only open to government agencies",
+        "AI whose source code is publicly available for anyone to use modify and distribute",
+        "AI that operates without an internet connection",
+        "AI developed by one company exclusively"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Open source AI projects like LLaMA and Stable Diffusion have publicly accessible code for anyone to use."
+    },
+    {
+      "text": "Which of the following describes AI hallucination?",
+      "options": [
+        "When AI generates visual art",
+        "When an AI model confidently generates false or fabricated information",
+        "When AI overheats due to excess processing",
+        "When AI systems see infrared light"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "AI hallucination is when a model generates plausible-sounding but incorrect information with high confidence."
+    },
+    {
+      "text": "Which industry is NOT typically associated with AI applications?",
+      "options": [
+        "Healthcare",
+        "Agriculture",
+        "Manual pottery crafting",
+        "Finance"
+      ],
+      "correctIndex": 2,
+      "marks": 1,
+      "explanation": "While AI revolutionizes healthcare, agriculture, and finance, traditional manual crafts like pottery are not AI-associated."
+    },
+    {
+      "text": "What is transfer learning in AI?",
+      "options": [
+        "Moving files between computers",
+        "Applying knowledge gained from one task to improve performance on a related task",
+        "Transferring AI models to cloud servers",
+        "A data backup method"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Transfer learning applies a pre-trained model to a different but related task, saving time and compute."
+    },
+    {
+      "text": "What is the significance of the year 1950 in AI history?",
+      "options": [
+        "The first computer was invented",
+        "Alan Turing published Computing Machinery and Intelligence and proposed the Turing Test",
+        "The first AI robot was built",
+        "ChatGPT was launched"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "In 1950, Alan Turing published his landmark paper proposing the Turing Test asking Can Machines Think."
+    },
+    {
+      "text": "What does AGI stand for in AI research?",
+      "options": [
+        "Automated General Intelligence",
+        "Artificial General Intelligence",
+        "Advanced Graphical Interface",
+        "Algorithm Generation Interface"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "AGI (Artificial General Intelligence) is hypothetical AI that can perform any intellectual task a human can do."
+    },
+    {
+      "text": "Which of the following is the best definition of data privacy in AI?",
+      "options": [
+        "Keeping AI code secret from competitors",
+        "Protecting individuals personal information from unauthorized access or misuse by AI systems",
+        "Storing data only on personal computers",
+        "Encrypting all AI models"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "Data privacy in AI ensures personal data is collected, stored, and used responsibly with user consent."
+    },
+    {
+      "text": "Which of the following best describes AI ethics?",
+      "options": [
+        "Rules for AI robots to follow in factories",
+        "A set of moral principles and guidelines for the responsible development and use of AI",
+        "Technical standards for AI hardware manufacturing",
+        "A course taught only in computer science departments"
+      ],
+      "correctIndex": 1,
+      "marks": 1,
+      "explanation": "AI ethics examines moral implications of AI including fairness, transparency, accountability, and societal impact."
+    }
+  ]
+}

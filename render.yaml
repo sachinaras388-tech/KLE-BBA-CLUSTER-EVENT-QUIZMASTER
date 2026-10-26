@@ -1,0 +1,30 @@
+# Render blueprint - New > Blueprint > select this repository
+services:
+  - type: web
+    name: quizmaster-api
+    runtime: node
+    rootDir: server
+    plan: starter            # free plans sleep when idle - use a paid plan for live competitions
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false          # paste your Atlas connection string in the Render dashboard
+      - key: JWT_SECRET
+        generateValue: true  # Render generates a strong random value
+      - key: CLIENT_URL
+        sync: false          # e.g. https://quizmaster.vercel.app
+      - key: COOKIE_SAMESITE
+        value: lax
+      - key: TRUST_PROXY
+        value: 2             # browser -> Vercel rewrite -> Render
+      - key: JWT_EXPIRES_HOURS
+        value: 8
+      - key: BCRYPT_ROUNDS
+        value: 12

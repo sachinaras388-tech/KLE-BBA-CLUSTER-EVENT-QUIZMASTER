@@ -1,0 +1,734 @@
+{
+  "competition": {
+    "title": "AI MIND MASTERS – FIRST ROUND",
+    "institution": "KLE Society’s College of BBA, Mahalingpur",
+    "totalQuestions": 60,
+    "maxMarks": 60,
+    "durationMinutes": 30,
+    "eventDate": "28-11-2026",
+    "startTime": "11:00 AM IST",
+    "endTime": "01:00 PM IST"
+  },
+  "questions": [
+    {
+      "text": "What is Artificial Intelligence (AI)?",
+      "options": [
+        "A computer's physical hardware",
+        "Technology that enables machines to perform tasks requiring human-like intelligence",
+        "A type of computer network",
+        "A programming language"
+      ],
+      "correctIndex": 1,
+      "explanation": "AI enables machines to perform tasks requiring human-like intelligence.",
+      "marks": 1
+    },
+    {
+      "text": "Who is widely known as the father of Artificial Intelligence?",
+      "options": [
+        "Alan Turing",
+        "Bill Gates",
+        "John McCarthy",
+        "Charles Babbage"
+      ],
+      "correctIndex": 2,
+      "explanation": "John McCarthy coined the term Artificial Intelligence in 1956 and is widely regarded as its father.",
+      "marks": 1
+    },
+    {
+      "text": "Which of the following is an example of a generative AI chatbot?",
+      "options": [
+        "Microsoft Excel",
+        "ChatGPT",
+        "Windows Explorer",
+        "Google Maps"
+      ],
+      "correctIndex": 1,
+      "explanation": "ChatGPT by OpenAI is a prominent generative AI conversational model.",
+      "marks": 1
+    },
+    {
+      "text": "What is the primary purpose of Machine Learning?",
+      "options": [
+        "Learning patterns from data to make predictions or decisions",
+        "Increasing computer screen brightness",
+        "Replacing computer hardware",
+        "Creating internet connections"
+      ],
+      "correctIndex": 0,
+      "explanation": "Machine Learning focuses on learning patterns from data to make predictions or decisions.",
+      "marks": 1
+    },
+    {
+      "text": "Which of the following is an AI-powered virtual assistant?",
+      "options": [
+        "Notepad",
+        "Microsoft Paint",
+        "Amazon Alexa",
+        "Calculator"
+      ],
+      "correctIndex": 2,
+      "explanation": "Amazon Alexa is an AI-driven smart voice assistant.",
+      "marks": 1
+    },
+    {
+      "text": "What does NLP stand for in Artificial Intelligence?",
+      "options": [
+        "Network Learning Program",
+        "Natural Language Processing",
+        "Neural Logic Protocol",
+        "National Language Platform"
+      ],
+      "correctIndex": 1,
+      "explanation": "NLP stands for Natural Language Processing.",
+      "marks": 1
+    },
+    {
+      "text": "Which AI technology enables computers to interpret images and videos?",
+      "options": [
+        "Cloud computing",
+        "Data encryption",
+        "Word processing",
+        "Computer vision"
+      ],
+      "correctIndex": 3,
+      "explanation": "Computer vision allows machines to process, analyze, and interpret visual data.",
+      "marks": 1
+    },
+    {
+      "text": "What is a chatbot?",
+      "options": [
+        "A software program designed to communicate with users through conversation",
+        "A computer storage device",
+        "A type of printer",
+        "A spreadsheet formula"
+      ],
+      "correctIndex": 0,
+      "explanation": "A chatbot is an automated conversational software application.",
+      "marks": 1
+    },
+    {
+      "text": "What is generative AI primarily designed to do?",
+      "options": [
+        "Repair physical computer components",
+        "Increase internet speed",
+        "Generate new content such as text, images, audio, or code",
+        "Store electricity"
+      ],
+      "correctIndex": 2,
+      "explanation": "Generative AI creates new content like text, imagery, audio, and code based on prompts.",
+      "marks": 1
+    },
+    {
+      "text": "Which is a common application of AI in email services?",
+      "options": [
+        "Printing envelopes",
+        "Detecting spam and suspicious emails",
+        "Changing monitor resolution",
+        "Formatting keyboards"
+      ],
+      "correctIndex": 1,
+      "explanation": "AI algorithms detect unsolicited spam and phishing attempts in modern email platforms.",
+      "marks": 1
+    },
+    {
+      "text": "How can AI help a business forecast sales?",
+      "options": [
+        "By analysing historical sales, trends, and market data",
+        "By randomly selecting sales targets",
+        "By removing all customer records",
+        "By replacing every employee"
+      ],
+      "correctIndex": 0,
+      "explanation": "Predictive AI models analyze historical trends, seasonality, and external factors to forecast demand.",
+      "marks": 1
+    },
+    {
+      "text": "How can AI assist human resource management?",
+      "options": [
+        "By guaranteeing every applicant a job",
+        "By eliminating the need for workplace policies",
+        "By supporting résumé screening and recruitment workflows",
+        "By automatically deciding every promotion without review"
+      ],
+      "correctIndex": 2,
+      "explanation": "AI supports HR teams by parsing résumés and screening candidate qualifications efficiently.",
+      "marks": 1
+    },
+    {
+      "text": "What is a major business benefit of AI automation?",
+      "options": [
+        "More repetitive manual work",
+        "Guaranteed profits",
+        "Elimination of every business risk",
+        "Improved efficiency and reduced repetitive work"
+      ],
+      "correctIndex": 3,
+      "explanation": "Automation reduces manual repetitive chores, freeing workers for higher-value tasks.",
+      "marks": 1
+    },
+    {
+      "text": "Which AI application estimates future customer demand using data?",
+      "options": [
+        "Desktop publishing",
+        "Predictive analytics",
+        "File compression",
+        "Screen recording"
+      ],
+      "correctIndex": 1,
+      "explanation": "Predictive analytics utilizes statistical algorithms and machine learning to project future outcomes.",
+      "marks": 1
+    },
+    {
+      "text": "A company analyses customer reviews to identify positive and negative opinions. Which AI technique is most relevant?",
+      "options": [
+        "Sentiment analysis",
+        "Image compression",
+        "Speech synthesis",
+        "File encryption"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sentiment analysis identifies and categorizes subjective opinions expressed in text.",
+      "marks": 1
+    },
+    {
+      "text": "What is a key purpose of data analytics in business?",
+      "options": [
+        "Increasing paperwork",
+        "Removing all business records",
+        "Analysing information to identify patterns and support decisions",
+        "Avoiding performance measurement"
+      ],
+      "correctIndex": 2,
+      "explanation": "Data analytics uncovers actionable patterns to guide evidence-based business choices.",
+      "marks": 1
+    },
+    {
+      "text": "What is Robotic Process Automation (RPA) commonly used for?",
+      "options": [
+        "Designing physical robots for factories only",
+        "Automating repetitive, rule-based digital tasks",
+        "Creating social media followers automatically",
+        "Replacing internet infrastructure"
+      ],
+      "correctIndex": 1,
+      "explanation": "RPA automates rule-based digital workflows across legacy and modern business systems.",
+      "marks": 1
+    },
+    {
+      "text": "Which is an example of AI in customer service?",
+      "options": [
+        "A paper noticeboard",
+        "A manual filing cabinet",
+        "A traditional wall clock",
+        "A virtual assistant that answers customer queries"
+      ],
+      "correctIndex": 3,
+      "explanation": "Virtual AI customer assistants offer 24/7 self-service query resolution.",
+      "marks": 1
+    },
+    {
+      "text": "How can AI help manufacturing companies?",
+      "options": [
+        "By guaranteeing that machines never fail",
+        "By eliminating the need for safety procedures",
+        "By predicting equipment failures from sensor data",
+        "By removing all quality checks"
+      ],
+      "correctIndex": 2,
+      "explanation": "Predictive maintenance algorithms anticipate equipment wear using IoT sensor data.",
+      "marks": 1
+    },
+    {
+      "text": "What is a sensible first step when introducing AI into a business?",
+      "options": [
+        "Identify a problem, pilot a solution, and measure the results",
+        "Replace all existing systems immediately",
+        "Purchase the most expensive AI software",
+        "Ignore employee feedback"
+      ],
+      "correctIndex": 0,
+      "explanation": "Effective AI adoption starts with clear problem definition, pilot validation, and ROI measurement.",
+      "marks": 1
+    },
+    {
+      "text": "Which online business activity commonly uses AI recommendation systems?",
+      "options": [
+        "Printing receipts manually",
+        "Suggesting products on an online shopping website",
+        "Repairing computer monitors",
+        "Formatting paper documents"
+      ],
+      "correctIndex": 1,
+      "explanation": "E-commerce recommendation engines suggest relevant products based on browse and purchase history.",
+      "marks": 1
+    },
+    {
+      "text": "What is customer segmentation?",
+      "options": [
+        "Deleting customer accounts",
+        "Charging every customer a different price without a reason",
+        "Dividing customers into groups with similar characteristics or behaviours",
+        "Stopping customer communication"
+      ],
+      "correctIndex": 2,
+      "explanation": "Customer segmentation groups buyers by shared demographics, needs, or buying patterns.",
+      "marks": 1
+    },
+    {
+      "text": "How can AI support digital advertising?",
+      "options": [
+        "By guaranteeing every advertisement goes viral",
+        "By removing the need to understand customers",
+        "By ensuring every campaign produces profit",
+        "By helping target audiences and optimise advertising campaigns"
+      ],
+      "correctIndex": 3,
+      "explanation": "AI optimizes ad delivery, bidding, creative testing, and audience targeting in real time.",
+      "marks": 1
+    },
+    {
+      "text": "What does Click-Through Rate (CTR) measure?",
+      "options": [
+        "The percentage of impressions that result in clicks",
+        "The total number of employees in a company",
+        "The cost of manufacturing a product",
+        "The number of products in a warehouse"
+      ],
+      "correctIndex": 0,
+      "explanation": "CTR = (Total Clicks / Total Impressions) * 100%.",
+      "marks": 1
+    },
+    {
+      "text": "Which technique can help a company understand customer opinions on social media?",
+      "options": [
+        "Disk partitioning",
+        "Sentiment analysis",
+        "File conversion",
+        "Data backup"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sentiment analysis gauges public sentiment and brand perception across social channels.",
+      "marks": 1
+    },
+    {
+      "text": "How does an AI recommendation engine personalise a shopping experience?",
+      "options": [
+        "By displaying only the most expensive products",
+        "By showing random products to every user",
+        "By suggesting items based on preferences and behaviour",
+        "By preventing customers from comparing products"
+      ],
+      "correctIndex": 2,
+      "explanation": "Recommendations reflect tailored interests and inferred customer intent.",
+      "marks": 1
+    },
+    {
+      "text": "What is A/B testing in digital marketing?",
+      "options": [
+        "Comparing two versions to determine which performs better",
+        "Testing two computer keyboards",
+        "Comparing employee attendance registers",
+        "Creating two customer accounts for every user"
+      ],
+      "correctIndex": 0,
+      "explanation": "A/B testing splits traffic between variants A and B to test conversion rates.",
+      "marks": 1
+    },
+    {
+      "text": "How can generative AI help a marketing team?",
+      "options": [
+        "By guaranteeing customer loyalty",
+        "By automatically approving every advertisement",
+        "By replacing all marketing strategy",
+        "By drafting marketing content and suggesting campaign ideas"
+      ],
+      "correctIndex": 3,
+      "explanation": "Generative tools assist copywriters by brainstorming slogans, emails, and social posts.",
+      "marks": 1
+    },
+    {
+      "text": "What does SEO stand for?",
+      "options": [
+        "Social Engagement Operations",
+        "Search Engine Optimization",
+        "System Efficiency Output",
+        "Secure Electronic Operations"
+      ],
+      "correctIndex": 1,
+      "explanation": "SEO stands for Search Engine Optimization.",
+      "marks": 1
+    },
+    {
+      "text": "What should a business avoid when publishing AI-generated marketing content?",
+      "options": [
+        "Reviewing spelling and grammar",
+        "Checking whether the content suits its audience",
+        "Publishing misleading claims or inaccurate information",
+        "Ensuring that advertisements are relevant"
+      ],
+      "correctIndex": 2,
+      "explanation": "Brands must verify facts to avoid false advertising, hallucinated specs, or misleading claims.",
+      "marks": 1
+    },
+    {
+      "text": "How can AI help banks identify potential fraud?",
+      "options": [
+        "By approving every transaction",
+        "By removing transaction histories",
+        "By treating every customer as suspicious",
+        "By identifying unusual transaction patterns"
+      ],
+      "correctIndex": 3,
+      "explanation": "Anomaly detection models spot anomalous spending amounts, foreign locations, and velocity spikes.",
+      "marks": 1
+    },
+    {
+      "text": "Which technology can extract printed text from scanned invoices?",
+      "options": [
+        "Optical Character Recognition (OCR)",
+        "Virtual Reality (VR)",
+        "Global Positioning System (GPS)",
+        "Bluetooth"
+      ],
+      "correctIndex": 0,
+      "explanation": "OCR converts printed or typed text into editable, searchable machine data.",
+      "marks": 1
+    },
+    {
+      "text": "What is algorithmic trading?",
+      "options": [
+        "Trading based entirely on handwritten records",
+        "Buying products from a supermarket",
+        "Using computer algorithms to execute trading decisions",
+        "Calculating employee attendance"
+      ],
+      "correctIndex": 2,
+      "explanation": "Algorithmic trading executes market orders via pre-programmed automated quantitative strategies.",
+      "marks": 1
+    },
+    {
+      "text": "How can AI assist a bank during credit assessment?",
+      "options": [
+        "By guaranteeing that borrowers repay every loan",
+        "By analysing relevant financial and credit data",
+        "By approving every loan application",
+        "By ignoring the applicant's financial circumstances"
+      ],
+      "correctIndex": 1,
+      "explanation": "AI evaluates creditworthiness by processing credit history, cash flows, and debt-to-income ratios.",
+      "marks": 1
+    },
+    {
+      "text": "What is an important limitation of AI-based financial predictions?",
+      "options": [
+        "They always require paper records",
+        "They cannot process numerical data",
+        "They always produce identical results",
+        "Predictions can be wrong because of uncertainty, data quality, or changing conditions"
+      ],
+      "correctIndex": 3,
+      "explanation": "Financial markets are volatile, subject to black swan events and unpredictable external shifts.",
+      "marks": 1
+    },
+    {
+      "text": "Which technology can convert printed receipts into searchable digital text?",
+      "options": [
+        "OCR",
+        "GPS",
+        "NFC",
+        "Bluetooth"
+      ],
+      "correctIndex": 0,
+      "explanation": "OCR (Optical Character Recognition) transforms receipt photos into structured expense records.",
+      "marks": 1
+    },
+    {
+      "text": "How can AI assist an organisation's expense management?",
+      "options": [
+        "By guaranteeing that all expenses are legitimate",
+        "By removing the need for financial records",
+        "By classifying expenses and flagging unusual claims",
+        "By automatically approving every reimbursement"
+      ],
+      "correctIndex": 2,
+      "explanation": "AI categorizes expenditures and detects policy violations or duplicated claim receipts.",
+      "marks": 1
+    },
+    {
+      "text": "What is a common use of AI in personal finance applications?",
+      "options": [
+        "Manufacturing bank cards",
+        "Categorising transactions into spending categories",
+        "Guaranteeing investment returns",
+        "Printing currency notes"
+      ],
+      "correctIndex": 1,
+      "explanation": "Finance apps auto-classify debits into Groceries, Utilities, Travel, and Entertainment.",
+      "marks": 1
+    },
+    {
+      "text": "A fraud detection system incorrectly flags a genuine payment as fraudulent. What is this called?",
+      "options": [
+        "True positive",
+        "True negative",
+        "False negative",
+        "False positive"
+      ],
+      "correctIndex": 3,
+      "explanation": "A false positive occurs when a harmless, genuine event is erroneously marked as an anomaly.",
+      "marks": 1
+    },
+    {
+      "text": "What is an essential practice when deploying AI in financial services?",
+      "options": [
+        "Reviewing errors, fairness, risks, and accountability",
+        "Allowing AI to make every decision without oversight",
+        "Ignoring customer complaints",
+        "Removing all security controls"
+      ],
+      "correctIndex": 0,
+      "explanation": "Financial AI requires strict compliance audits, model governance, explainability, and bias checks.",
+      "marks": 1
+    },
+    {
+      "text": "Which company developed ChatGPT?",
+      "options": [
+        "Amazon",
+        "OpenAI",
+        "Adobe",
+        "IBM"
+      ],
+      "correctIndex": 1,
+      "explanation": "ChatGPT was created and launched by OpenAI in November 2022.",
+      "marks": 1
+    },
+    {
+      "text": "Which platform is widely used to create posters, presentations, and social media graphics with AI-assisted features?",
+      "options": [
+        "Notepad",
+        "Windows File Explorer",
+        "Canva",
+        "Device Manager"
+      ],
+      "correctIndex": 2,
+      "explanation": "Canva integrates AI design features like Magic Studio for visual graphic creation.",
+      "marks": 1
+    },
+    {
+      "text": "What is a prompt in generative AI?",
+      "options": [
+        "An instruction or input given to an AI system",
+        "A computer's power cable",
+        "A type of printer cartridge",
+        "A spreadsheet cell"
+      ],
+      "correctIndex": 0,
+      "explanation": "A prompt is the natural language cue or command passed to a generative model.",
+      "marks": 1
+    },
+    {
+      "text": "Which Microsoft application is primarily used for spreadsheets and numerical analysis?",
+      "options": [
+        "Microsoft Paint",
+        "Microsoft Outlook",
+        "Microsoft Word",
+        "Microsoft Excel"
+      ],
+      "correctIndex": 3,
+      "explanation": "Microsoft Excel is the standard spreadsheet application for numerical data analysis.",
+      "marks": 1
+    },
+    {
+      "text": "What is an AI hallucination?",
+      "options": [
+        "An AI system physically overheating",
+        "Incorrect or fabricated information generated by an AI system",
+        "A computer losing its internet connection",
+        "A user forgetting a password"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hallucination refers to plausible-sounding but factually untrue or fabricated AI outputs.",
+      "marks": 1
+    },
+    {
+      "text": "What is the main purpose of a business dashboard?",
+      "options": [
+        "To replace all business departments",
+        "To create computer animations",
+        "To display key performance indicators (KPIs) and business information",
+        "To store passwords in plain text"
+      ],
+      "correctIndex": 2,
+      "explanation": "Dashboards synthesize core metrics and KPIs into visual, easily digestable charts.",
+      "marks": 1
+    },
+    {
+      "text": "Which of the following is a popular AI assistant developed by Google?",
+      "options": [
+        "Gemini",
+        "Photoshop",
+        "VLC Media Player",
+        "WinRAR"
+      ],
+      "correctIndex": 0,
+      "explanation": "Gemini is Google's advanced multimodal AI assistant and foundation model.",
+      "marks": 1
+    },
+    {
+      "text": "Which AI tool is commonly associated with generating images from text prompts?",
+      "options": [
+        "Microsoft Calculator",
+        "Windows Task Manager",
+        "File Explorer",
+        "DALL·E"
+      ],
+      "correctIndex": 3,
+      "explanation": "DALL-E by OpenAI converts descriptive text prompts into realistic images and artwork.",
+      "marks": 1
+    },
+    {
+      "text": "Which of the following is a popular AI coding assistant developed by GitHub and Microsoft in collaboration with OpenAI technology?",
+      "options": [
+        "Google Calendar",
+        "GitHub Copilot",
+        "Microsoft Paint",
+        "Windows Media Player"
+      ],
+      "correctIndex": 1,
+      "explanation": "GitHub Copilot suggests real-time code completions inside developers' IDEs.",
+      "marks": 1
+    },
+    {
+      "text": "Which AI capability is most useful for summarising a long business report?",
+      "options": [
+        "Image compression",
+        "Network routing",
+        "Natural language processing and text generation",
+        "Hardware diagnostics"
+      ],
+      "correctIndex": 2,
+      "explanation": "NLP summarization algorithms condense long documents into concise executive briefings.",
+      "marks": 1
+    },
+    {
+      "text": "What is AI bias?",
+      "options": [
+        "A computer's screen brightness setting",
+        "A temporary internet connection failure",
+        "A method of compressing files",
+        "Systematic unfairness in AI outputs or decisions"
+      ],
+      "correctIndex": 3,
+      "explanation": "AI bias arises when training data or algorithms produce systematic discrimination or prejudiced results.",
+      "marks": 1
+    },
+    {
+      "text": "Why should confidential business information be handled carefully when using AI tools?",
+      "options": [
+        "It may expose sensitive information or violate privacy requirements",
+        "AI tools cannot process text",
+        "Confidential information is always publicly available",
+        "Sharing it guarantees better AI accuracy"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pasting proprietary trade secrets into public AI tools can lead to data leaks and GDPR/privacy infractions.",
+      "marks": 1
+    },
+    {
+      "text": "What is the purpose of human oversight in AI systems?",
+      "options": [
+        "To prevent computers from storing data",
+        "To make AI decisions impossible",
+        "To review important decisions, correct errors, and ensure accountability",
+        "To remove all automated processes"
+      ],
+      "correctIndex": 2,
+      "explanation": "Human-in-the-loop ensures legal compliance, moral accountability, and mistake prevention.",
+      "marks": 1
+    },
+    {
+      "text": "Which of the following is an example of responsible AI use?",
+      "options": [
+        "Publishing unverified AI-generated medical claims",
+        "Checking AI-generated information before relying on it",
+        "Sharing customer passwords with an AI chatbot",
+        "Using AI to discriminate against applicants"
+      ],
+      "correctIndex": 1,
+      "explanation": "Fact-checking and human verification are pillars of responsible AI deployment.",
+      "marks": 1
+    },
+    {
+      "text": "What does explainable AI aim to achieve?",
+      "options": [
+        "Make every AI model invisible",
+        "Eliminate the need for data",
+        "Guarantee that every prediction is correct",
+        "Make AI decisions and outputs more understandable to people"
+      ],
+      "correctIndex": 3,
+      "explanation": "Explainable AI (XAI) clarifies how and why neural models reach specific conclusions.",
+      "marks": 1
+    },
+    {
+      "text": "What is a deepfake?",
+      "options": [
+        "AI-generated or manipulated audio, image, or video content that can imitate real people or events",
+        "A secure method of backing up files",
+        "A type of computer processor",
+        "A spreadsheet function"
+      ],
+      "correctIndex": 0,
+      "explanation": "Deepfakes use synthetic media generation to simulate authentic likenesses of people.",
+      "marks": 1
+    },
+    {
+      "text": "Why should organisations monitor AI systems after deployment?",
+      "options": [
+        "To ensure they never need software updates",
+        "To eliminate all human involvement",
+        "To detect performance changes, errors, and emerging risks",
+        "To guarantee that customer preferences never change"
+      ],
+      "correctIndex": 2,
+      "explanation": "Post-deployment monitoring catches data drift, concept drift, and emergent failure modes.",
+      "marks": 1
+    },
+    {
+      "text": "What is the best response when an AI system provides a suspicious or unsupported factual claim?",
+      "options": [
+        "Publish it immediately",
+        "Verify it using reliable sources before relying on it",
+        "Assume it is correct because AI generated it",
+        "Share it without checking"
+      ],
+      "correctIndex": 1,
+      "explanation": "Always cross-reference unverified outputs with authoritative primary sources.",
+      "marks": 1
+    },
+    {
+      "text": "Which statement best describes the relationship between AI and human intelligence?",
+      "options": [
+        "AI is always superior to humans in every task",
+        "AI can never perform useful tasks",
+        "Human review is never needed when using AI",
+        "AI can assist with many tasks, while human judgment remains important in context-sensitive decisions"
+      ],
+      "correctIndex": 3,
+      "explanation": "AI serves as cognitive augmentation, while humans provide ethics, empathy, and nuanced judgment.",
+      "marks": 1
+    },
+    {
+      "text": "Which skill is most valuable for students preparing to work with AI in business?",
+      "options": [
+        "Combining AI literacy, critical thinking, data skills, and ethical judgment",
+        "Memorising AI-generated answers without understanding them",
+        "Depending entirely on automated decisions",
+        "Avoiding all new digital technologies"
+      ],
+      "correctIndex": 0,
+      "explanation": "Future leaders thrive by combining AI proficiency, critical reasoning, and ethical responsibility.",
+      "marks": 1
+    }
+  ]
+}
