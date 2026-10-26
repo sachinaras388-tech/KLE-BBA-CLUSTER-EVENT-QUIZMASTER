@@ -8,7 +8,7 @@ const { finalizeAttempt, finalizeExpired, gradeAnswers } = require('../services/
 const { computeLeaderboard } = require('../services/leaderboard');
 const { ApiError, asyncHandler, shuffle } = require('../utils/helpers');
 
-const graceMs = () => env.SUBMIT_GRACE_SECONDS * 1000;
+const graceMs = () => (process.env.SUBMIT_GRACE_SECONDS !== undefined ? Number(process.env.SUBMIT_GRACE_SECONDS) : env.SUBMIT_GRACE_SECONDS) * 1000;
 const FINAL = Attempt.FINAL_STATUSES;
 
 /* ------------------------------------------------------------------ */

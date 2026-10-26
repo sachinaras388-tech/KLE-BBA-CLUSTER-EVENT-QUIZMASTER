@@ -7,10 +7,13 @@
     "dev": "node dev.js",
     "install:all": "npm --prefix server install && npm --prefix client install",
     "admin": "npm --prefix server run create-admin",
+    "init-admin": "npm --prefix server run init-admin",
+    "seed-quiz": "npm --prefix server run seed-quiz",
     "seed": "npm --prefix server run seed",
     "dev:server": "npm --prefix server run dev",
     "dev:client": "npm --prefix client run dev",
-    "build": "npm --prefix client run build",
-    "test": "npm --prefix server test"
+    "build": "npm --prefix client install && npm --prefix client run build && npm --prefix server install",
+    "start": "node server/src/server.js",
+    "test": "node --test server/tests/e2e.test.js"
   }
 }

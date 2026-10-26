@@ -6,6 +6,8 @@ const compression = require('compression');
 const morgan = require('morgan');
 const mongoSanitize = require('express-mongo-sanitize');
 const mongoose = require('mongoose');
+const path = require('path');
+const fs = require('fs');
 
 const env = require('./config/env');
 const routes = require('./routes');
@@ -17,11 +19,17 @@ const app = express();
 app.set('trust proxy', env.TRUST_PROXY);
 app.disable('x-powered-by');
 
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+    crossOriginEmbedderPolicy: false,
+  })
+);
 app.use(
   cors({
     origin(origin, cb) {
-      if (!origin || env.clientOrigins.includes(origin)) return cb(null, true);
+      if (!origin || env.clientOrigins.includes(origin) || env.clientOrigins.includes('*')) return cb(null, true);
+      if (origin.endsWith('.onrender.com') || origin.endsWith('.vercel.app')) return cb(null, true);
       return cb(new ApiError(403, 'Origin not allowed by CORS', 'CORS'));
     },
     credentials: true,
@@ -48,6 +56,17 @@ app.get('/health', (_req, res) => {
 });
 
 app.use('/api', apiLimiter, csrfGuard, routes);
+
+// Serve client static build for unified deployment (Render single-service)
+const clientDistPath = path.resolve(__dirname, '../../client/dist');
+if (fs.existsSync(clientDistPath)) {
+  app.use(express.static(clientDistPath));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api') || req.path === '/health') return next();
+    res.sendFile(path.join(clientDistPath, 'index.html'));
+  });
+}
+
 app.use(notFound);
 app.use(errorHandler);
 

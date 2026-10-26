@@ -1,4 +1,8 @@
-require('dotenv').config({ override: true });
+if (process.env.NODE_ENV !== 'test') {
+  require('dotenv').config({ override: true });
+} else {
+  require('dotenv').config({ override: false });
+}
 const { z } = require('zod');
 const dns = require('dns');
 
