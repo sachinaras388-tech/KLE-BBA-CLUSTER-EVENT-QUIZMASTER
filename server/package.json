@@ -14,7 +14,8 @@
     "init-admin": "node scripts/initAdmin.js",
     "seed-quiz": "node scripts/seedAiMindMasters.js",
     "seed": "node scripts/seed.js",
-    "test": "node --test tests/"
+    "test": "node --test tests/e2e.test.js",
+    "test:live": "node scripts/testLiveApis.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
